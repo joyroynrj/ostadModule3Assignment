@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create and Append Elements Example</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var ul = document.getElementById('myList');
+      
+      // Function to create and append list items
+      function createAndAppendListItems() {
+        for (var i = 1; i <= 5; i++) {
+          var li = document.createElement('li');
+          li.textContent = i;
+          ul.appendChild(li);
+        }
+      }
+      
+      // Call the function to create and append list items
+      createAndAppendListItems();
+    });
+  </script>
+</head>
+<body>
+  <h1>Create and Append Elements Example</h1>
+  <ul id="myList"></ul>
+</body>
+</html>

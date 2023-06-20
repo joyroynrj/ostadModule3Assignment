@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Navigator Object</title>
+   
+</head>
+<body>
+<script>
+  // a. Write a JavaScript function that detects the user's browser name and version using the navigator object.
+  function getBrowserInformation(){
+    let browserName =  navigator.appName;
+    let browserVersion = navigator.appVersion;
+
+    if(browserName === "Netscape" && navigator.userAgent.indexOf("Trident") !== -1){
+      browserName = "Internet Explorer";
+    } else if (browserName === "Netscape" && navigator.userAgent.indexOf("Firefox") !== -1){
+      browserName = "Mozila Firefox";
+    } else if (browserName === "Netscape" && navigator.userAgent.indexOf("Chrome") !== -1) {
+    browserName = "Chrome";
+    } else if (browserName === "Netscape" && navigator.userAgent.indexOf("Safari") !== -1) {
+    browserName = "Safari";
+    }
+
+    return {
+      name: browserName,
+      version: browserVersion
+    };
+  }
+
+  // b. Implement the function to display the user's browser name and version.
+
+  var browserInfo = getBrowserInformation();
+  console.log("Browser Name: " + browserInfo.name);
+  console.log("Browser Version: " + browserInfo.version);
+
+
+</script>
+</body>
+</html>

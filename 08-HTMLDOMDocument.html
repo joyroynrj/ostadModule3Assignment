@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML DOM Documents</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var button = document.getElementById('myButton');
+      var paragraph = document.getElementById('myParagraph');
+      
+      // Function to handle button click event
+      function handleButtonClick() {
+        paragraph.textContent = "Button Clicked!";
+      }
+      
+      // Event listener for button click
+      button.addEventListener('click', handleButtonClick);
+    });
+  </script>
+</head>
+<body>
+  <h1>Button Click Example</h1>
+  <p id="myParagraph">Initial text</p>
+  <button id="myButton">Click Me</button>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Window Object</title>
+   
+</head>
+<body>
+<script>
+// a. Create a function that opens a new window with a specified URL and dimensions (width and heigh
+
+function openNewWindow(url, width, height) {
+  const windowFeatures = `width=${width},height=${height}`;
+  window.open(url, '_blank', windowFeatures);
+}
+
+// b. Implement the function to open a new window with the URL "https://www.example.com" and dimensions 800x600.
+const url = 'https://www.example.com';
+const width = 800;
+const height = 600;
+
+openNewWindow(url, width, height);
+
+
+</script>
+</body>
+</html>

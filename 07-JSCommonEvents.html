@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Common Events</title>
+    <style>
+      img {
+        width: 300px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- a. When the user clicks anywhere on the page, display an alert with the coordinates (x, y) of the click.
+    b. When the user presses any key on the keyboard, display an alert with the key code of the pressed key.
+    c. When the user moves the mouse over an image, change the image source to another image of your choice. -->
+
+    <h1>JS Common Events</h1>
+    
+    <img id="myImage" src="https://placehold.co/600x400/000000/blue" alt="Image">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var image = document.getElementById('myImage');
+        
+        // Function to display coordinates of click
+        function displayCoordinates(event) {
+          var x = event.clientX;
+          var y = event.clientY;
+          alert("Coordinates (x, y): " + x + ", " + y);
+        }
+        
+        // Function to display key code
+        function displayKeyCode(event) {
+          var keyCode = event.keyCode;
+          alert("Key Code: " + keyCode);
+        }
+        
+        // Function to change image source
+        function changeImageSource() {
+          image.src = "https://placehold.co/600x400/000000/red";
+        }
+        
+        // Event listeners
+        document.addEventListener('click', displayCoordinates);
+        document.addEventListener('keydown', displayKeyCode);
+        image.addEventListener('mouseover', changeImageSource);
+      });
+    </script>
+  </body>
+  </html>

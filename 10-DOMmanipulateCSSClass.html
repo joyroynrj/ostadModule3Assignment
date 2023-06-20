@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulate CSS Class</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var button = document.getElementById('myButton');
+      var paragraph = document.getElementById('myParagraph');
+      
+      // Function to handle button click event
+      function handleButtonClick() {
+        paragraph.classList.add('highlight');
+      }
+      
+      // Event listener for button click
+      button.addEventListener('click', handleButtonClick);
+    });
+  </script>
+</head>
+<body>
+  <h1>Add CSS Class Example</h1>
+  <p id="myParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <button id="myButton">Add Highlight</button>
+</body>
+</html>
